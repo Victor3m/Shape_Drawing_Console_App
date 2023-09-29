@@ -6,4 +6,4 @@
    1. Height of the shape
    1. The option to repeat at the end. <br>
 1. A sample run might go something like this: <br>
-   <img src="/Problem_1_Example.png" width="635" height="354">
+   <img src="/images/Problem_1_Example.png" width="635" height="354">

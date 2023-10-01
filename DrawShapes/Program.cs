@@ -1,9 +1,10 @@
 ﻿namespace DrawShapes;
-
-class Program
-{
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello, World!");
+        static void Main(string[] args)
+        {
+            // Your code goes here
+            Shape shape = new Diamond(5);
+            shape.drawShape();
+        }
     }
-}

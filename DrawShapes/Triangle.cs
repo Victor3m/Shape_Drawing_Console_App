@@ -14,7 +14,11 @@ class Triangle : Shape
             //Prints the rows that don't contain the embedded text
             for (int j = 1; j < (this.Size * 2); j++)
             {
-                if (j >= this.Size - i && j <= this.Size + i && j % 2 == i % 2)
+                if (
+                    j >= this.Size - i 
+                    && j <= this.Size + i 
+                    && (((this.Size % 2 == 0) && ((j % 2) == (i % 2)) ) || ((this.Size % 2 != 0) && ((j % 2) != (i % 2))))
+                    )
                 {
                     Console.Write("X");
                 }

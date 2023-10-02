@@ -7,22 +7,46 @@ class Diamond : Shape
     }
     public override void drawShape()
     {
+        var middle = (this.Size + 1) / 2;
         //Draw a diamond
         //Prints out row by row each part of the diamond
-        for (int i = 0; i < this.Size; i++)
+        for (int i = 1; i <= this.Size; i++)
         {
-            //Prints the rows that don't contain the embedded text
-            for (int j = 1; j <= this.Size; j++)
+            if(i <= middle)
             {
-                if (j >= this.Size - i && j <= this.Size + i && j % 2 == i % 2)
+                for (int j = 1; j <= this.Size; j++)
                 {
-                    Console.Write("X");
-                }
-                else
+                    if (j > (middle - i) 
+                    && j < (middle + i) && (((middle % 2 == 0) && 
+                    ((j % 2) != (i % 2)) ) || ((middle % 2 != 0) && ((j % 2) == (i % 2)))))
+                    {
+                        Console.Write("X");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
+                } 
+            }
+            else
+            {
+                for (int j = 1; j <= this.Size; j++)
                 {
-                    Console.Write(" ");
+                    if (
+                        j >= (i - middle + 1) 
+                        && j <= (this.Size + middle - i) 
+                        && (((middle % 2 == 0) && ((j % 2) != (i % 2)) ) || ((middle % 2 != 0) && ((j % 2) == (i % 2))))
+                        )
+                    {
+                        Console.Write("X");
+                    }
+                    else
+                    {
+                        Console.Write(" ");
+                    }
                 }
             }
+
             Console.Write("\n");
         }
     }

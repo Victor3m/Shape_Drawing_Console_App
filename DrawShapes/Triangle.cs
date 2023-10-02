@@ -1,9 +1,10 @@
 namespace DrawShapes;
 class Triangle : Shape
 {
-    public Triangle(int size)
+    public Triangle(int size, char drawChar)
     {
         this.Size = size;
+        this.DrawChar = drawChar;
     }
     public override void drawShape()
     {
@@ -15,18 +16,19 @@ class Triangle : Shape
             for (int j = 1; j < (this.Size * 2); j++)
             {
                 if (
-                    j >= this.Size - i 
-                    && j <= this.Size + i 
-                    && (((this.Size % 2 == 0) && ((j % 2) == (i % 2)) ) || ((this.Size % 2 != 0) && ((j % 2) != (i % 2))))
+                    j >= this.Size - i
+                    && j <= this.Size + i
+                    && (((this.Size % 2 == 0) && ((j % 2) == (i % 2))) || ((this.Size % 2 != 0) && ((j % 2) != (i % 2))))
                     )
                 {
-                    Console.Write("X");
+                    Console.Write(this.DrawChar);
                 }
                 else
                 {
                     Console.Write(" ");
                 }
             }
+            //Continue to next line to draw
             Console.Write("\n");
         }
     }

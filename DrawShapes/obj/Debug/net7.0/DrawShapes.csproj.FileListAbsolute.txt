@@ -12,3 +12,17 @@
 /home/jhester/Documents/LUJobAppProject/Project_1/Code_Problems_Part_1/DrawShapes/obj/Debug/net7.0/DrawShapes.pdb
 /home/jhester/Documents/LUJobAppProject/Project_1/Code_Problems_Part_1/DrawShapes/obj/Debug/net7.0/DrawShapes.genruntimeconfig.cache
 /home/jhester/Documents/LUJobAppProject/Project_1/Code_Problems_Part_1/DrawShapes/obj/Debug/net7.0/ref/DrawShapes.dll
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/bin/Debug/net7.0/DrawShapes
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/bin/Debug/net7.0/DrawShapes.deps.json
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/bin/Debug/net7.0/DrawShapes.runtimeconfig.json
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/bin/Debug/net7.0/DrawShapes.dll
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/bin/Debug/net7.0/DrawShapes.pdb
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/obj/Debug/net7.0/DrawShapes.GeneratedMSBuildEditorConfig.editorconfig
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/obj/Debug/net7.0/DrawShapes.AssemblyInfoInputs.cache
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/obj/Debug/net7.0/DrawShapes.AssemblyInfo.cs
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/obj/Debug/net7.0/DrawShapes.csproj.CoreCompileInputs.cache
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/obj/Debug/net7.0/DrawShapes.dll
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/obj/Debug/net7.0/refint/DrawShapes.dll
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/obj/Debug/net7.0/DrawShapes.pdb
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/obj/Debug/net7.0/DrawShapes.genruntimeconfig.cache
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/obj/Debug/net7.0/ref/DrawShapes.dll

@@ -1,9 +1,10 @@
 namespace DrawShapes;
 class Square : Shape
 {
-    public Square(int size)
+    public Square(int size, char drawChar)
     {
         this.Size = size;
+        this.DrawChar = drawChar;
     }
     public override void drawShape()
     {
@@ -16,13 +17,14 @@ class Square : Shape
                 {
                     if (j % 2 == 0)
                     {
-                        Console.Write("X");
+                        Console.Write(this.DrawChar);
                     }
                     else
                     {
                         Console.Write(" ");
                     }
                 }
+            //Continue to next line to draw
             Console.Write("\n");
         }
     }

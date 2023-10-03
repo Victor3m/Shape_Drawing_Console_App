@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/DrawShapes.csproj": {}
+    "/home/jhester/Documents/LUJobAppProject/Project_1/Code_Problems_Part_1/DrawShapes/DrawShapes.csproj": {}
   },
   "projects": {
-    "/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/DrawShapes.csproj": {
+    "/home/jhester/Documents/LUJobAppProject/Project_1/Code_Problems_Part_1/DrawShapes/DrawShapes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/DrawShapes.csproj",
+        "projectUniqueName": "/home/jhester/Documents/LUJobAppProject/Project_1/Code_Problems_Part_1/DrawShapes/DrawShapes.csproj",
         "projectName": "DrawShapes",
-        "projectPath": "/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/DrawShapes.csproj",
-        "packagesPath": "/home/victorem/.nuget/packages/",
-        "outputPath": "/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/obj/",
+        "projectPath": "/home/jhester/Documents/LUJobAppProject/Project_1/Code_Problems_Part_1/DrawShapes/DrawShapes.csproj",
+        "packagesPath": "/home/jhester/.nuget/packages/",
+        "outputPath": "/home/jhester/Documents/LUJobAppProject/Project_1/Code_Problems_Part_1/DrawShapes/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/victorem/.nuget/NuGet/NuGet.Config"
+          "/home/jhester/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/221/sdk/7.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/jhester/.dotnet/sdk/7.0.401/RuntimeIdentifierGraph.json"
         }
       }
     }

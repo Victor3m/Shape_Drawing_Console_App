@@ -20,4 +20,24 @@ abstract class Shape
         set { middle = value; }
     }
     public abstract void drawShape();
+    protected bool isInLeftAndRightBound(int row, int pos)
+    {
+        //Is position in the top of the diamond within left and right most boundarys
+        return ((pos > leftBound(row)) && (pos < rightBound(row)));
+    }
+    protected bool isMiddleEven()
+    {
+        return (Middle % 2 == 0); //Is the middle position number even
+    }
+    protected bool isSizeEven()
+    {
+        return (this.Size % 2 == 0); //Is the size of the shape an even or odd number
+    }
+    protected bool isPositionSameAsLine(int row, int pos)
+    {
+        return ((pos % 2) == (row % 2)); //Are the position and line either even or odd at the same time
+    }
+    protected abstract bool isPrintOnEvenOrOddPosition(int row, int pos);
+    protected abstract int leftBound( int row );
+    protected abstract int rightBound( int row );
 }

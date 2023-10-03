@@ -2,11 +2,44 @@ namespace DrawShapes;
 
 class InputCheck
 {
+      private bool isStringEmpty(string input)
+    {
+        return input == "";
+    }
+    private bool doesStringMatch(string input, string[] validInputs)
+    {
+        foreach (string validInput in validInputs)
+        {
+            if (input == validInput)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
     public InputCheck()
     {
-
+        Console.Clear();
+        Console.WriteLine("Welcome to the shape drawer!\n");
+    }
+    
+    //This method checks if the input is an even number and returns it as an bool
+    public bool isEven(int value)
+    {
+        return (value % 2 == 0);
     }
 
+    public int checkForEven(int value)
+    {
+        while (isEven(value))
+        {
+            Console.WriteLine("Height must be an odd number due to how this shape is drawn.\nPlease try again with an odd number. ");
+            value = positiveIntCheck();
+        }
+        return value;
+    }
+
+    //This method checks if the input is a character and returns it as a char
     public char checkChar()
     {
         string input = Console.ReadLine();
@@ -26,7 +59,7 @@ class InputCheck
     public int positiveIntCheck()
     {
         string input = Console.ReadLine();
-        while (input == "" || !int.TryParse(input, out int result) || result < 0)
+        while (isStringEmpty(input) || !int.TryParse(input, out int result) || result < 0)
         {
             Console.WriteLine("Please enter a positive integer. ");
             input = Console.ReadLine();
@@ -37,22 +70,27 @@ class InputCheck
     //This method checks if the input is a valid shape and returns it as a string
     public string checkShape()
     {
-        string input = Console.ReadLine();
-        while (input == "" || (input != "diamond" && input != "triangle" && input != "square"))
+        string input = Console.ReadLine().ToLower();
+        string[] validInputs = { "diamond", "triangle", "square", "circle" };
+        while (isStringEmpty(input) || !doesStringMatch(input, validInputs))
         {
-            Console.WriteLine("Please enter either 'diamond', 'triangle', or 'square'. ");
+            Console.WriteLine("Please enter either 'circle', 'diamond', 'triangle', or 'square'. ");
             input = Console.ReadLine();
         }
         return input;
     }
+
+
 
     //This method checks if the user wants to continue drawing shapes
     public bool checkContinue()
     {
         Console.WriteLine("Would you like to draw another shape? (y/n) ");
         string input = Console.ReadLine();
-        while (input == "" || (input != "y" && input != "n"))
+        string[] validInputs = { "y", "n" };
+        while (isStringEmpty(input) || !doesStringMatch(input, validInputs))
         {
+            Console.Clear();
             Console.WriteLine("Please enter either 'y' or 'n'. ");
             input = Console.ReadLine();
         }

@@ -1,3 +1,5 @@
+using System.Net.Security;
+
 namespace DrawShapes;
 class Diamond : Shape
 {
@@ -7,68 +9,61 @@ class Diamond : Shape
         this.DrawChar = drawChar;
         this.Middle = (this.Size + 1) / 2;
     }
-    private bool isTopInLeftAndRightBound(int i, int j)
+
+    protected override int leftBound(int row)
     {
-        //Is position in the top of the diamond within left and right most boundarys
-        return ((j > (Middle - i)) && (j < (Middle + i)));
+        return (Middle - row);
     }
-    private bool isBotInLeftAndRightBound(int i, int j)
+    protected override int rightBound(int row)
     {
-        //Is position in the bottom of the diamond within left and right most boundarys
-        return ((j >= (i - Middle + 1)) && (j <= (this.Size + Middle - i)));
-    }
-    private bool isMiddleEven(int i, int j)
-    {
-        return ((Middle % 2 == 0)); //Is the middle number an even or odd number
-    }
-    private bool isPositionSameAsLine(int i, int j)
-    {
-        return ((j % 2) == (i % 2)); //Are the position and line either even or odd at the same time
+        return (Middle + row);
     }
     public override void drawShape()
     {
         //Draw a diamond
         //Prints out row by row each part of the diamond
-        for (int i = 1; i <= this.Size; i++)
+        for (int row = 1; row <= Middle; row++)
         {
-            if (i <= Middle)
+            for (int pos = 1; pos <= this.Size; pos++)
             {
-                for (int j = 1; j <= this.Size; j++)
+                if (
+                    isInLeftAndRightBound(row, pos) &&
+                    isPrintOnEvenOrOddPosition(row, pos)
+                )
                 {
-                    if (
-                        isTopInLeftAndRightBound(i, j) &&
-                        ((isMiddleEven(i, j) && !isPositionSameAsLine(i, j)) ||
-                        (!isMiddleEven(i, j) && isPositionSameAsLine(i, j)))
-                    )
-                    {
-                        Console.Write(this.DrawChar); //print character
-                    }
-                    else
-                    {
-                        Console.Write(" "); //print space
-                    }
+                    Console.Write(this.DrawChar); //print character
+                }
+                else
+                {
+                    Console.Write(" "); //print space
                 }
             }
-            else
-            {
-                for (int j = 1; j <= this.Size; j++)
-                {
-                    if (
-                        isBotInLeftAndRightBound(i, j) &&
-                        ((isMiddleEven(i, j) && !isPositionSameAsLine(i, j)) ||
-                        (!isMiddleEven(i, j) && isPositionSameAsLine(i, j)))
-                    )
-                    {
-                        Console.Write(this.DrawChar); //print character
-                    }
-                    else
-                    {
-                        Console.Write(" "); //print space
-                    }
-                }
-            }
-            //Continue to next line to draw
             Console.Write("\n");
         }
+        for (int row = Middle - 1; row >= 0; row--)
+        {
+            for (int pos = 1; pos <= this.Size; pos++)
+            {
+                if (
+                    isInLeftAndRightBound(row, pos) &&
+                    isPrintOnEvenOrOddPosition(row, pos)
+                )
+                {
+                    Console.Write(this.DrawChar); //print character
+                }
+                else
+                {
+                    Console.Write(" "); //print space
+                }
+            }
+            Console.Write("\n");
+        }
+    }
+    protected override bool isPrintOnEvenOrOddPosition(int row, int pos)
+    {
+        return (
+            ( isMiddleEven() && !isPositionSameAsLine(row, pos)) ||
+            ( !isMiddleEven() && isPositionSameAsLine(row, pos))
+        );
     }
 }

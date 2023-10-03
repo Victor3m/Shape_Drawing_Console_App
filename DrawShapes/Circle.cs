@@ -43,8 +43,4 @@ class Circle : Shape
     {
         throw new NotImplementedException();
     }
-    protected override bool isPrintOnEvenOrOddPosition(int row, int pos)
-    {
-        throw new NotImplementedException();
-    }
 }

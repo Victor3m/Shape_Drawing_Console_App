@@ -22,7 +22,7 @@ abstract class Shape
     public abstract void drawShape();
     protected bool isInLeftAndRightBound(int row, int pos)
     {
-        //Is position in the top of the diamond within left and right most boundarys
+        //Is the position within left and right most boundarys
         return ((pos > leftBound(row)) && (pos < rightBound(row)));
     }
     protected bool isMiddleEven()
@@ -31,13 +31,12 @@ abstract class Shape
     }
     protected bool isSizeEven()
     {
-        return (this.Size % 2 == 0); //Is the size of the shape an even or odd number
+        return (this.Size % 2 == 0); //Is the size of the shape even
     }
     protected bool isPositionSameAsLine(int row, int pos)
     {
         return ((pos % 2) == (row % 2)); //Are the position and line either even or odd at the same time
     }
-    protected abstract bool isPrintOnEvenOrOddPosition(int row, int pos);
     protected abstract int leftBound( int row );
     protected abstract int rightBound( int row );
 }

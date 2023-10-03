@@ -3,6 +3,13 @@ using System.Net.Security;
 namespace DrawShapes;
 class Diamond : Shape
 {
+    private bool isPrintOnEvenOrOddPosition(int row, int pos)
+    {
+        return (
+            ( isMiddleEven() && !isPositionSameAsLine(row, pos)) ||
+            ( !isMiddleEven() && isPositionSameAsLine(row, pos))
+        );
+    }
     public Diamond(int size, char drawChar)
     {
         this.Size = size;
@@ -58,12 +65,5 @@ class Diamond : Shape
             }
             Console.Write("\n");
         }
-    }
-    protected override bool isPrintOnEvenOrOddPosition(int row, int pos)
-    {
-        return (
-            ( isMiddleEven() && !isPositionSameAsLine(row, pos)) ||
-            ( !isMiddleEven() && isPositionSameAsLine(row, pos))
-        );
     }
 }

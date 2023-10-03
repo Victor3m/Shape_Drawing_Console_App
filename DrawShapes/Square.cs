@@ -36,9 +36,4 @@ class Square : Shape
             Console.Write("\n");
         }
     }
-
-    protected override bool isPrintOnEvenOrOddPosition(int row, int pos)
-    {
-        throw new System.NotImplementedException();
-    }
 }

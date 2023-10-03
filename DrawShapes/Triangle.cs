@@ -1,6 +1,13 @@
 namespace DrawShapes;
 class Triangle : Shape
 {
+   private bool isPrintOnEvenOrOddPosition(int row, int pos)
+    {
+        return (
+            ( isMiddleEven() && isPositionSameAsLine(row, pos)) ||
+            ( !isMiddleEven() && isPositionSameAsLine(row, pos))
+        );
+    }
     public Triangle(int size, char drawChar)
     {
         this.Size = size;
@@ -43,11 +50,5 @@ class Triangle : Shape
         }
     }
 
-    protected override bool isPrintOnEvenOrOddPosition(int row, int pos)
-    {
-        return (
-            ( isMiddleEven() && isPositionSameAsLine(row, pos)) ||
-            ( !isMiddleEven() && isPositionSameAsLine(row, pos))
-        );
-    }
+ 
 }

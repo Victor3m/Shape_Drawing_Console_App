@@ -2,7 +2,7 @@ namespace DrawShapes;
 
 class InputCheck
 {
-      private bool isStringEmpty(string input)
+    private bool isStringEmpty(string input)
     {
         return input == "";
     }
@@ -23,12 +23,13 @@ class InputCheck
         Console.WriteLine("Welcome to the shape drawer!\n");
     }
     
-    //This method checks if the input is an even number and returns it as an bool
+    //This method checks if the input is an even number and returns true or false
     public bool isEven(int value)
     {
         return (value % 2 == 0);
     }
 
+    //This method checks if the input is an even number and returns it as an int
     public int checkForEven(int value)
     {
         while (isEven(value))
@@ -79,8 +80,6 @@ class InputCheck
         }
         return input;
     }
-
-
 
     //This method checks if the user wants to continue drawing shapes
     public bool checkContinue()

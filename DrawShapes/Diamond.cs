@@ -5,26 +5,43 @@ class Diamond : Shape
     {
         this.Size = size;
         this.DrawChar = drawChar;
+        this.Middle = (this.Size + 1) / 2;
     }
-    
+    private bool isTopInLeftAndRightBound(int i, int j)
+    {
+        //Is position in the top of the diamond within left and right most boundarys
+        return ((j > (Middle - i)) && (j < (Middle + i)));
+    }
+    private bool isBotInLeftAndRightBound(int i, int j)
+    {
+        //Is position in the bottom of the diamond within left and right most boundarys
+        return ((j >= (i - Middle + 1)) && (j <= (this.Size + Middle - i)));
+    }
+    private bool isMiddleEven(int i, int j)
+    {
+        return ((Middle % 2 == 0)); //Is the middle number an even or odd number
+    }
+    private bool isPositionSameAsLine(int i, int j)
+    {
+        return ((j % 2) == (i % 2)); //Are the position and line either even or odd at the same time
+    }
     public override void drawShape()
     {
-        var middle = (this.Size + 1) / 2;
         //Draw a diamond
         //Prints out row by row each part of the diamond
         for (int i = 1; i <= this.Size; i++)
         {
-            if (i <= middle)
+            if (i <= Middle)
             {
                 for (int j = 1; j <= this.Size; j++)
                 {
                     if (
-                        j > (middle - i) //is position within left most boundary
-                        && j < (middle + i) //is position within the right most boundary
-                        && (((middle % 2 == 0) && ((j % 2) != (i % 2))) || ((middle % 2 != 0) && ((j % 2) == (i % 2)))))
-                    //((is middle even) and ((position is odd and line is even) or (position is even and line is odd))) or ((is middle odd) and (position is even and line is even) or (position is odd and line is odd))
+                        isTopInLeftAndRightBound(i, j) &&
+                        ((isMiddleEven(i, j) && !isPositionSameAsLine(i, j)) ||
+                        (!isMiddleEven(i, j) && isPositionSameAsLine(i, j)))
+                    )
                     {
-                        Console.Write(this.DrawChar); //print X
+                        Console.Write(this.DrawChar); //print character
                     }
                     else
                     {
@@ -37,13 +54,12 @@ class Diamond : Shape
                 for (int j = 1; j <= this.Size; j++)
                 {
                     if (
-                        j >= (i - middle + 1) //is position within left most boundary
-                        && j <= (this.Size + middle - i) //is position within the right most boundary
-                        && (((middle % 2 == 0) && ((j % 2) != (i % 2))) || ((middle % 2 != 0) && ((j % 2) == (i % 2))))
-                        //((is middle even) and ((position is odd and line is even) or (position is even and line is odd))) or ((is middle odd) and (position is even and line is even) or (position is odd and line is odd))
-                        )
+                        isBotInLeftAndRightBound(i, j) &&
+                        ((isMiddleEven(i, j) && !isPositionSameAsLine(i, j)) ||
+                        (!isMiddleEven(i, j) && isPositionSameAsLine(i, j)))
+                    )
                     {
-                        Console.Write(this.DrawChar); //print X
+                        Console.Write(this.DrawChar); //print character
                     }
                     else
                     {

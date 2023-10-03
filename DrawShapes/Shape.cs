@@ -3,6 +3,7 @@ abstract class Shape
 {
     private int size;
     private char drawChar = 'X';
+    private int middle;
     public int Size
     {
         get { return size; }
@@ -12,6 +13,11 @@ abstract class Shape
     {
         get { return drawChar; }
         set { drawChar = value; }
+    }
+    public int Middle
+    {
+        get { return middle; }
+        set { middle = value; }
     }
     public abstract void drawShape();
 }

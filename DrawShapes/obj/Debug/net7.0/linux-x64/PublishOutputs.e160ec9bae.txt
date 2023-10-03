@@ -1,0 +1,2 @@
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/bin/Debug/net7.0/linux-x64/publish/DrawShapes.pdb
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/bin/Debug/net7.0/linux-x64/publish/DrawShapes

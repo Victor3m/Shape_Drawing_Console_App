@@ -1,0 +1,5 @@
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/bin/Debug/net7.0/publish/DrawShapes
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/bin/Debug/net7.0/publish/DrawShapes.dll
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/bin/Debug/net7.0/publish/DrawShapes.deps.json
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/bin/Debug/net7.0/publish/DrawShapes.runtimeconfig.json
+/mnt/e/Jhester4/Documents/LUJobAppProject/Project 1/Code_Problems_Part_1/DrawShapes/bin/Debug/net7.0/publish/DrawShapes.pdb
